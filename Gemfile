@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production
+
+gem "omniauth-twitter"
+
+gem "omniauth"
+
 gem 'dotenv-rails', :groups => [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
