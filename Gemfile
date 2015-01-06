@@ -2,11 +2,19 @@ source 'https://rubygems.org'
 
 gem 'rails_12factor', group: :production
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
 gem "omniauth-twitter"
 
 gem "omniauth"
 
 gem 'dotenv-rails', :groups => [:development, :test]
+
+gem 'httparty'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use postgresql as the database for Active Record
