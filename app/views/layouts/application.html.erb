@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CollageCaption</title>
+  <title>mixed up</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
   <script src="http://intridea.github.com/sketch.js/lib/sketch.js"></script>
 </head>
 <body>
 
-  <h1>I NEED A NAME</h1>
+  <h1>mixed up</h1>
 
   <% if current_user.nil? %>
     <%= link_to "log in with twitter", "/auth/twitter" %>
     <%= link_to "log in with tumblr", "/auth/tumblr" %>
   <% else %>
-    Welcome, <%= current_user.name %>
+    Welcome, <%= current_user.name %>.
   <% end %>
 
 <%= yield %>
