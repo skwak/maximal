@@ -10,16 +10,17 @@
 </head>
 <body>
 
-  <h1>mixed up</h1>
-
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   
+  <h1>mixed up</h1>
+
   <% if current_user.nil? %>
     <%= link_to "log in with twitter", "/auth/twitter" %>
     <%= link_to "log in with tumblr", "/auth/tumblr" %>
   <% else %>
     Welcome, <%= current_user.name %>.
+    <%= link_to "sign out", signout_path, method: :delete %>
   <% end %>
 
 <%= yield %>
