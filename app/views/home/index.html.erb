@@ -4,6 +4,8 @@
 </div>
 
 <div class="user-feed-area">
+  <%= image_tag "grid.png", class: "image-bucket" %>
+  
   <% if current_user.provider == "tumblr" %>
     <h2>Your latest Tumblr Posts</h2>
     <% @tumblrs.each do |post| %>
