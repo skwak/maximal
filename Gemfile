@@ -13,7 +13,7 @@ gem 'omniauth-twitter'
 
 gem 'omniauth'
 
-gem 'devise'
+# gem 'devise'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
