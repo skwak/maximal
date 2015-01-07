@@ -4,5 +4,10 @@
 </div>
 
 <div class="user-feed-area">
-  Your latest tweets
+  <% if current_user.provider == "tumblr" %>
+    <h2>Your latest Tumblr Posts</h2>
+    <% @tumblrs.each do |post| %>
+      <%= post %>
+    <% end %>
+  <% end %>
 </div>
