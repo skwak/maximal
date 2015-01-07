@@ -1,4 +1,4 @@
-h1 {
+h1, h2 {
   font-family: "Open Sans", serif;
 }
 
@@ -12,6 +12,8 @@ h1 {
 }
 
 .image-bucket {
+  width: 5em;
+  height: 5em;
   
 }
 

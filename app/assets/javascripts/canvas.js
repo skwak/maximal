@@ -8,6 +8,7 @@ function sketch() {
 };
 
 function drag() {
+  disableImageResize: false;
   $(".image-bucket").draggable({
     containment: $("#collage-spot"),
     tolerance: 'fit',
