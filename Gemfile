@@ -3,15 +3,17 @@ source 'https://rubygems.org'
 gem 'rails_12factor', group: :production
 
 group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 gem 'omniauth-tumblr'
 
-gem "omniauth-twitter"
+gem 'omniauth-twitter'
 
-gem "omniauth"
+gem 'omniauth'
+
+gem 'devise'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
