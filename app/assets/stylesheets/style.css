@@ -1,7 +1,16 @@
 h1 {
   font-family: "Open Sans", serif;
 }
+
 #collage-spot {
   margin-left: 0 auto;
   border: 1px #000 solid;
+}
+
+.collage-area {
+
+}
+
+.user-feed-area {
+  float: right;
 }

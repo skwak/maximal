@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-  def create_oauth
+  def create_or_find_oauth
     auth_hash = request.env["omniauth.auth"]
     if User.find_by(uid: auth_hash["uid"]).nil?
       @user = User.create(uid: auth_hash["uid"],
