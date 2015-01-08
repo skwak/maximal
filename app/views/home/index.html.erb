@@ -3,10 +3,10 @@
   <canvas id="collage-spot", height="500", width="500"></canvas>
 </div>
 
-<div class="user-feed-area">
+<div class="user-feed-area choice-images">
   <h2>Backgrounds</h2>
   <%= image_tag "grid.png", class: "image-bucket" %>
-  
+    
   <% if !current_user.nil? && current_user.provider == "tumblr" %>
     <h2>Your latest Tumblr Posts</h2>
     <% @tumblrs.each do |post| %>
