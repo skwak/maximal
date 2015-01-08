@@ -21,7 +21,7 @@ function drag() {
 }
 
 function dropImage() {
-  $(".image-bucket").droppable({
+  $("#collage-wrapper").droppable({
     drop: function (e, ui) {
       $(ui.draggable).clone().appendTo($(this));
     }
