@@ -17,10 +17,12 @@ h1, h2 {
 
 #collage-spot {
   border: 1px #000 solid;
+  z-index: 1;
 }
 
 .selected-image {
   width: 10em;
   height: 10em;
+  z-index: 2;
 }
 
