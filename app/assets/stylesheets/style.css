@@ -1,7 +1,8 @@
 .container {
   width: 90%;
-  margin: 0 auto;
+
 }
+
 h1, h2 {
   font-family: "Open Sans", serif;
 }
@@ -19,9 +20,8 @@ h1, h2 {
 }
 
 .image-bucket {
-  width: 5em;
-  height: 5em;
-  
+  width: 10em;
+  height: 10em;
 }
 
 .user-feed-area, .choice-images {

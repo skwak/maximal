@@ -12,12 +12,10 @@
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-  
 <div class="container">
-
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  
   <h1>maximal</h1>
   
   <% if current_user.nil? %>
@@ -27,10 +25,8 @@
     Welcome, <%= current_user.name %>.
     <%= link_to "sign out", signout_path, method: :delete %>
   <% end %>
-
-
-<%= yield %>
-
+  
+  <%= yield %>
   
 </div>
 
