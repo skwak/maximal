@@ -2,6 +2,7 @@ $(function() {
   sketch();
   // imageResize();
   drag();
+  dropImage();
 });
 
 function sketch() {
@@ -13,6 +14,19 @@ function drag() {
     containment: $("#collage-wrapper"),
     tolerance: 'fit',
     cursor: 'pointer',
-    position: 'relative' 
+    position: 'relative',
+    revert:"valid",
+    helper:"clone"
   });
 }
+
+function dropImage() {
+  $(".image-bucket").droppable({
+    drop: function (e, ui) {
+      $(ui.draggable).clone().appendTo($(this));
+    }
+  });
+}
+  
+
+
