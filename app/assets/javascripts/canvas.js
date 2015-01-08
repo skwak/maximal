@@ -7,17 +7,10 @@ $(function() {
 function sketch() {
   $("#collage-spot").sketch();
 }
-// 
-// function imageResize() {
-//   $(".image-bucket").resizable({
-//     containment: $(".image-bucket")
-//   });  
-//   drag();
-// }
 
 function drag() {
   $(".image-bucket").draggable({
-    containment: $(".everything-collage"),
+    containment: $("#collage-wrapper"),
     tolerance: 'fit',
     cursor: 'pointer',
     position: 'relative' 
