@@ -10,23 +10,31 @@ function sketch() {
 }
 
 function drag() {
-  $(".image-bucket").draggable({
-    containment: $("#collage-wrapper"),
-    tolerance: 'fit',
-    cursor: 'pointer',
-    position: 'relative',
-    revert:"valid",
-    helper:"clone"
+  $(".selected-image").draggable({
+    // containment: $("#collage-spot"),
+    // tolerance: 'fit',
+    // cursor: 'pointer',
+    // position: 'relative',
+    helper:"clone",
+    stop: handleDragStop
   });
 }
 
+function handleDragStop( event, ui ) {
+  var offsetXPos = parseInt( ui.offset.left );
+  var offsetYPos = parseInt( ui.offset.top );
+  alert( "Drag stopped!\n\nOffset: (" + offsetXPos + ", " + offsetYPos + ")\n");
+}
+
+
 function dropImage() {
-  $("#collage-wrapper").droppable({
-    drop: function (e, ui) {
+  $("#collage-spot").droppable({
+    accept: $(".selected-image"),
+    drop: function(e, ui){  
       $(ui.draggable).clone().appendTo($(this));
-    }
+    } 
   });
 }
   
-
+  
 
