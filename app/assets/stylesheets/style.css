@@ -1,14 +1,21 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
 h1, h2 {
   font-family: "Open Sans", serif;
 }
 
-#collage-spot {
-  margin-left: 0 auto;
-  border: 1px #000 solid;
+.collage-area {
+  width: 70%;
+  padding: 0;
+  margin-left: 2em;
+  margin-right: 1em;
+  float: left;
 }
 
-.collage-area {
-
+#collage-spot {
+  border: 1px #000 solid;
 }
 
 .image-bucket {
@@ -18,5 +25,7 @@ h1, h2 {
 }
 
 .user-feed-area, .choice-images {
+  width: 20%;
   float: right;
+  margin-left: 1em;
 }

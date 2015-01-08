@@ -7,7 +7,7 @@ function sketch() {
   $("#collage-spot").sketch();
 }
 
-function resize() {
+function imageResize() {
   $(".image-bucket").resizable({
     containment: $(".image-bucket")
   });  
