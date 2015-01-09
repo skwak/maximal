@@ -1,6 +1,7 @@
 $(function() {
   sketch();
   tweetDrag();
+  dropTweet();
   $("#grid").click(function() {
     setBackground();
   });
@@ -14,22 +15,21 @@ function setBackground() {
   var imageLink = $("#grid").attr("src");
   $("#collage-spot").css("background", "url('" + imageLink + "')");
 }
-    
-function dropTweet() {
-  $("#collage-spot").droppable( {
-    drop: function (event, ui) {
-      $(this).append($(ui.draggable).clone());
-    }
-  });
-}
 
 function tweetDrag() {
-  $(".tweet").draggable({
-    revert: "invalid",
+  $("li").draggable({
     helper: "clone"
   });
 }   
 
+function dropTweet () {$("#collage-spot").droppable({
+  accept: "li",
+  drop: function(event,ui){
+    var context = $(this)[0].getContext("2d");
+    context.fillText($(ui.draggable).clone().text(),ui.position.left - event.target.offsetLeft,ui.position.top - event.target.offsetTop);
+    }
+  });
+}
   // imageResize();
   // drag();
   // dropImage();

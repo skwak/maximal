@@ -35,5 +35,6 @@ ul {
 
 li.tweet {
   padding: .5em;
+  z-index: 3;
 }
 
