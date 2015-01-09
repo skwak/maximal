@@ -22,7 +22,7 @@ function tweetDrag() {
   });
 }   
 
-function dropTweet () {$("#collage-spot").droppable({
+function dropTweet () {$(".container").droppable({
   accept: $(".tweet"),
   drop: function(event,ui){
     var context = $(this)[0].getContext("2d");
