@@ -12,6 +12,8 @@
 
   <% if !current_user.nil? && current_user.provider == "twitter" %>
   
+    <h2>Tweets</h2>
+    
     <ul>
     <% @tweets.each do |tweet| %>
       <li class="tweet"><%= tweet.text %></li>
