@@ -1,7 +1,6 @@
 $(function() {
   sketch();
   $("#grid").click(function() {
-    console.log($(this));
     setBackground();
   });
 });
