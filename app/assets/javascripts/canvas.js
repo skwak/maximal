@@ -10,6 +10,7 @@ function setBackground() {
   $("#collage-spot").css("background", "url('" + imageLink + "')");
 }
 
+
   // sketch();
   // imageResize();
   // drag();
