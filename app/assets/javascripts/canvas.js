@@ -1,25 +1,23 @@
 $(function() {
+  sketch();
   $("#grid").click(function() {
     console.log($(this));
     setBackground();
   });
 });
 
+function sketch() {
+  $("#collage-spot").sketch();
+}
+
 function setBackground() {
   var imageLink = $("#grid").attr("src");
   $("#collage-spot").css("background", "url('" + imageLink + "')");
 }
 
-
-  // sketch();
   // imageResize();
   // drag();
   // dropImage();
-
-
-// function sketch() {
-//   $("#collage-spot").sketch();
-// }
 
 // function drag() {
 //   $(".selected-image").draggable({
