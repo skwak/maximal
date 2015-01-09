@@ -15,17 +15,15 @@ class HomeController < ApplicationController
         config.access_token = ENV["TWITTER_ACCESS_TOKEN"]
         config.access_token_secret = ENV["TWITTER_ACCESS_TOKEN_SECRET"]
       end
-      @my_tweets = $client.user("kwakstop")
+      
+      # @tweets = $client.user_timeline(current_user.uid.to_i)
+      @tweets = $client.user_timeline(current_user.uid.to_i)
+
     end
   end
 
 
-  # def client.get_all_tweets(user)
-  #   collect_with_max_id do |max_id|
-  #     options = {count: 10, include_rts: false}
-  #     options[:max_id] = max_id unless max_id.nil?
-  #     user_timeline(user, options)
-  #   end
-  # end
+
+
   
 end

@@ -11,14 +11,25 @@
     selected-images class images would go here
 
   <% if !current_user.nil? && current_user.provider == "twitter" %>
-    <%= @my_tweets %>
+  
+    <ul>
+    <% @tweets.each do |tweet| %>
+      <li class="tweet"><%= tweet.text %></li>
+    <% end %>
+    </ul>
+  
   <% end %>  
+  
   <% if !current_user.nil? && current_user.provider == "tumblr" %>
+  
     <h2>Your latest Tumblr Posts</h2>
+    
     <%= @tumblrs %>
+    
     <% @tumblrs.each do |post| %>
       <%= post[0] %>
     <% end %>
+    
   <% end %>
 </div>
 
