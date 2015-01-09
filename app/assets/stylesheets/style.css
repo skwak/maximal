@@ -25,9 +25,11 @@ body {
 }
 
 .background {
-  width: 10em;
-  height: 10em;
+  width: 5em;
+  height: 5em;
 }
 
 
-
+li.tweet {
+  background-color: #99f8cf;
+}
