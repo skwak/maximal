@@ -29,7 +29,11 @@ body {
   height: 5em;
 }
 
+ul {
+  list-style-type: none;
+}
 
 li.tweet {
-  /*background-color: #99f8cf;*/
+  padding: .5em;
 }
+
