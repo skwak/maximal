@@ -17,13 +17,13 @@ function setBackground() {
 }
 
 function tweetDrag() {
-  $("li").draggable({
+  $(".tweet").draggable({
     helper: "clone"
   });
 }   
 
 function dropTweet () {$("#collage-spot").droppable({
-  accept: "li",
+  accept: $(".tweet"),
   drop: function(event,ui){
     var context = $(this)[0].getContext("2d");
     context.fillText($(ui.draggable).clone().text(),ui.position.left - event.target.offsetLeft,ui.position.top - event.target.offsetTop);
