@@ -1,10 +1,9 @@
-.container {
-  width: 90%;
-
+body {
+  font-family: "Open Sans", serif;
 }
 
-h1, h2 {
-  font-family: "Open Sans", serif;
+.container {
+  width: 90%;
 }
 
 .collage-area {
@@ -17,12 +16,18 @@ h1, h2 {
 
 #collage-spot {
   border: 1px #000 solid;
-  z-index: 1;
 }
 
+/*things that can be selected for the canvas*/
 .selected-image {
   width: 10em;
   height: 10em;
-  z-index: 2;
 }
+
+.background {
+  width: 10em;
+  height: 10em;
+}
+
+
 

@@ -5,9 +5,11 @@
 
 <div class="user-feed-area">
   <h2>Backgrounds</h2>
-  <div id="selections">
-    <%= image_tag "grid.png", class: "selected-image" %>
-  </div>
+    <%= image_tag "grid.png", class: "background", id: "grid" %>
+    
+  <h2>Images</h2>
+    selected-images class images would go here
+
   
   <% if !current_user.nil? && current_user.provider == "tumblr" %>
     <h2>Your latest Tumblr Posts</h2>

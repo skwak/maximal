@@ -1,9 +1,20 @@
 $(function() {
+  $("#grid").click(function() {
+    console.log($(this));
+    setBackground();
+  });
+});
+
+function setBackground() {
+  var imageLink = $("#grid").attr("src");
+  $("#collage-spot").css("background", "url('" + imageLink + "')");
+}
+
   // sketch();
   // imageResize();
   // drag();
   // dropImage();
-});
+
 
 // function sketch() {
 //   $("#collage-spot").sketch();
