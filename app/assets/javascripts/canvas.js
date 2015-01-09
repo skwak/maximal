@@ -1,5 +1,7 @@
 $(function() {
   sketch();
+  tweetDrag();
+  dropTweet();
   $("#grid").click(function() {
     setBackground();
   });
@@ -13,7 +15,21 @@ function setBackground() {
   var imageLink = $("#grid").attr("src");
   $("#collage-spot").css("background", "url('" + imageLink + "')");
 }
+    
+function tweetDrag() {
+  $(".tweet").draggable({
+    revert: "invalid",
+    helper: "clone"
+  });
+}   
 
+function dropTweet() {
+  $("#collage-spot").droppable( {
+    drop: function (event, ui) {
+      $(this).append($(ui.draggable).clone());
+    }
+  });
+}
   // imageResize();
   // drag();
   // dropImage();
