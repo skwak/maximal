@@ -23,15 +23,17 @@ function tweetDrag() {
 }   
 // .resizable(),
 
-function dropTweet () {$(".container").droppable({
-  accept: $(".tweet"),
-  drop: function(event,ui){
+function dropTweet () {
+  $(".container").droppable({
+    accept: $(".tweet"),
+    drop: function(event,ui){
     var context = $(this)[0].getContext("2d");
     context.fillText($(ui.draggable).clone().text(),
     ui.position.left - event.target.offsetLeft,ui.position.top - event.target.offsetTop);
     }
   });
 }
+
   // imageResize();
   // drag();
   // dropImage();
