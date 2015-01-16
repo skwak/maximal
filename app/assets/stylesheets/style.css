@@ -1,3 +1,10 @@
+html {
+  background: -webkit-radial-gradient(#bddaff, #b6d5cb, #ddd3e0); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#bddaff, #b6d5cb, #ddd3e0); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#bddaff, #b6d5cb, #ddd3e0); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#bddaff, #b6d5cb, #ddd3e0); /* Standard syntax */
+}
+
 body {
   font-family: "Open Sans", serif;
 }

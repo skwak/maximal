@@ -20,7 +20,9 @@ function tweetDrag() {
   $(".tweet").draggable({
     helper: "clone"
   });
-}   
+}  
+
+ 
 // .resizable(),
 
 function dropTweet () {
@@ -29,8 +31,9 @@ function dropTweet () {
     drop: function(event,ui){
     var context = $(this)[0].getContext("2d");
     context.fillText($(ui.draggable).clone().text(),
-    ui.position.left - event.target.offsetLeft,ui.position.top - event.target.offsetTop);
-    }
+    ui.position.left - event.target.offsetLeft, ui.position.top - event.target.offsetTop
+      );
+  }
   });
 }
 
